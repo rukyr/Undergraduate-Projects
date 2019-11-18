@@ -1,0 +1,20 @@
+public static IntNode addBefore(IntNode front, int target, int newItem)
+{
+	IntNode current = front;
+	IntNode previous;
+	while(current.data != target) {
+		previous = current;
+		current = current.next;
+		if(current == null) {
+			return null;
+		}
+	}
+	IntNode Carlin = new IntNode(newItem, current);
+	if(current == front) {
+		front = Carlin;
+	}
+	else {
+		previous.next = Carlin;
+	}
+	return front;
+}

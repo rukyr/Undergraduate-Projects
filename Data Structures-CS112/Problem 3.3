@@ -1,0 +1,15 @@
+public static DLLNode moveToFront(DLLNode front, DLLNode target){
+  if(front == null || target == null || front == target){
+    return front;
+  }
+  else{
+    target.prev.next = target.next;
+    if(target.next != null){
+      target.next.prev = target.prev;
+    }
+  }
+  target.next = front;
+  target.prev = null;
+  front.prev = target;
+  return target;
+}

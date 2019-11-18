@@ -1,0 +1,12 @@
+public static int numberOfOccurences(StringNode front, String target) {
+	if(front == null) {
+		return 0;
+	}
+	int n;
+	for(n=0; front.next != null; front = front.next) {
+		if(front.data == target) {
+			n++;
+		}
+	}
+	return n;
+}

@@ -1,0 +1,14 @@
+/*  
+//  Four_even_numbers
+*/
+
+
+even,  EVEN;  Even?,  eVEN!!
+
+KeywordA,  KeywordA,  KeywordA, KeywordA,
+
+KeywordB, KeywordB,  KeywordB,  KeywordB
+
+KeywordC
+
+KeywordD, KeywordD, KeywordD, KeywordD, KeywordD, KeywordD, KeywordD, 

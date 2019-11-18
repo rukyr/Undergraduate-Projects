@@ -1,0 +1,17 @@
+public boolean delete(String target){
+  if(rear == null){
+    return false;
+  }
+
+  Node tmp = rear.next;
+  Node prev = rear;
+  while(!tmp.data.equals(target)){
+    if(tmp.data.equals(rear.data)){
+      return false;
+    }
+    prev = tmp;
+    tmp = tmp.next;
+  }
+  prev.next = tmp.next;
+  return true;
+}

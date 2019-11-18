@@ -1,0 +1,15 @@
+/*  
+//  The_keyword, "two", appears_two_times_in_this_file.
+//
+//  The_keyword, "common", appears_two_times_in_this_file.
+//
+*/
+
+
+two:   TwO,...
+
+Second, Second, Second, Second, 
+
+comMon,  COMmon?!
+
+twice   TWICE    

@@ -1,0 +1,12 @@
+public static void deleteEveryOther(IntNode front) {
+	if(front == null) {
+		return;
+	}
+	IntNode current = front;
+	IntNode previous;
+	if(current.next != null) {
+		
+
+	if(current.next == null){
+		return current;
+	}

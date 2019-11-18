@@ -1,0 +1,16 @@
+/*  
+//  The_keyword, "twelve", appears_twelve_times_in_this_file.
+//
+//  The_keyword, "common", appears_twelve_times_in_this_file.
+//
+*/
+
+
+twelve, twelve, twelve, twelve, twelve, twelve, twelve, twelve, twelve, twelve, twelve, twelve, 
+
+Twelfth,  Twelfth,  Twelfth,  Twelfth,  
+
+Common  Common  comMon,  COMmon?!    Common:   Common;  Common.  ComMon????
+Common  Common  Common  Common  
+
+twice   TWICE    

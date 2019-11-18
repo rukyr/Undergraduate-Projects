@@ -1,0 +1,15 @@
+/*  
+//  The_keyword, "eight", appears_eight_times_in_this_file.
+//
+//  The_keyword, "common", appears_eight_times_in_this_file.
+//
+*/
+
+
+eight, eight, eight, eight, eight, eight, eight, eight, 
+
+Eighth,  Eighth,  Eighth,  Eighth,  
+
+Common  Common  comMon,  COMmon?!    Common:   Common;  Common.  ComMon????
+
+twice   TWICE    
