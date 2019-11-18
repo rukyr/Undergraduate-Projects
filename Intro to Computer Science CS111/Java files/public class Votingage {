@@ -1,0 +1,14 @@
+public class Votingage {
+	public static void main(String[] args) {
+		System.out.print("What is your name?");
+		char name = IO.readChar();
+		System.out.print("What is your age);
+		IO.outputCharAnswer(name);
+		int number = IO.readInt();
+		if (number <= 18) {
+			System.out.println("You cannot vote."");
+		} else { 
+			System.out.print("You can vote!")
+		}
+	}
+}

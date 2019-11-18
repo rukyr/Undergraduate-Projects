@@ -1,0 +1,240 @@
+PROBLEM 1
+_________
+	Selection Sort:
+
+	M U E J R Q X B
+
+	After Loop Iteration 1:
+
+		M U E J R Q B X
+
+		Number of letter-to-letter comparisons performed on that pass: 7
+
+	After Loop Iteration 2:
+		
+		M B E J R Q U X
+
+		Number of letter-to-letter comparisons performed on that pass: 6
+
+	After Loop Iteration 3:
+		
+		M B E J Q R U X
+
+		Number of letter-to-letter comparisons performed on that pass: 5
+
+	After Loop Iteration 4:
+		
+		M B E J Q R U X
+
+		Number of letter-to-letter comparisons performed on that pass: 4		
+
+	After Loop Iteration 5:
+		
+		J B E M Q R U X
+
+		Number of letter-to-letter comparisons performed on that pass: 3
+
+	After Loop Iteration 6:
+		
+		E B J M Q R U X
+
+		Number of letter-to-letter comparisons performed on that pass: 2
+
+	After Loop Iteration 7:
+		
+		B E J M Q R U X
+
+		Number of letter-to-letter comparisons performed on that pass: 1
+	____________________________________________________________________
+
+	Insertion Sort:
+
+	M U E J R Q X B
+
+	After Loop Iteration 1:
+		
+		M U E J R Q X B
+
+		Number of letter-to-letter comparisons performed on that pass: 1
+
+	After Loop Iteration 2:
+		
+		E M U J R Q X B
+
+		Number of letter-to-letter comparisons performed on that pass: 2
+
+	After Loop Iteration 3:
+		
+		E J M U R Q X B
+
+		Number of letter-to-letter comparisons performed on that pass: 2
+
+	After Loop Iteration 4:
+		
+		E J M R U Q X B
+
+		Number of letter-to-letter comparisons performed on that pass: 1
+
+	After Loop Iteration 5:
+		
+		E J M Q R U X B
+
+		Number of letter-to-letter comparisons performed on that pass: 2
+
+	After Loop Iteration 6:
+		
+		E J M Q R U X B
+
+		Number of letter-to-letter comparisons performed on that pass: 1
+
+	After Loop Iteration 7:
+		
+		B E J M Q R U X
+
+		Number of letter-to-letter comparisons performed on that pass: 7
+	____________________________________________________________________
+
+PROBLEM 2
+_________
+
+	1. Determine if 2 arrays contain the same elements
+
+		-Create an algorithm to solve the problem (pseudocode):
+			selectionSort array A
+			selectionSort array B
+
+			Compare lengths of both; if they are not the same size, set boolean to false and print out "not the same elements" to user; if same size, set boolean to true;
+
+			if boolean == true; 
+				for loop that compares each index of both arrays for all indexes starting at index 0, less than length-1; increment by 1
+					//Ex. A[0] compared to B[0]...A[length-1] compared to B[length-1].
+					If comparison doesn't yield both elements being equal, print out "not the same elements" to user
+				if for loop goes to completion
+					System.out.print("both arrays have same elements")
+
+		-Identify the factors that would influence the running time, and which can be known before the algorithm or code is executed. Assign names (such as n) to each factor.
+			-Selection sorting each array will influence the running time. Each array will need to go through selection sort, each one having a n^2 runtime.
+			-After selection sort has been done for each array, the another for loop will need to be run to compare Array A's indexes to Array B's, with a runtime of n.
+
+		-Identify the operations that must be counted. You need not count every statement separately. If a group of statements always executes together, treat the group as a single unit. If a method is called, and you do not know the running time of that method, count it as a single operation.
+			(n^2) selectionSort array A
+			(n^2) selectionSort array B
+
+			(4) Compare lengths of both; if they are not the same size, set boolean to false and print out "not the same elements" to user; if same size, set boolean to true;
+
+			(1) if boolean == true; 
+				(n) for loop that compares each index of both arrays for all indexes starting at index 0, less than length-1; increment by 1
+						//Ex. A[0] compared to B[0]...A[length-1] compared to B[length-1].
+						If comparison doesn't yields both elements being equal, print out "not the same elements" to user;
+				(1)	if for loop goes to completion, print "both arrays have same elements" to user
+		
+		-Count the operations performed by the algorithm or code. Express the count as a function of the factors you identified in Step 2. If the count cannot be expressed as a simple function of those factors, define the bounds that can be placed on the count: the best case (lower bound) and worst case (upper bound).
+			
+			function of program: 2n^2+n+5
+
+		-Determine what the Best Case Inputs are, and the Worst Case Inputs are, and the efficiency of your implementation
+			-Best Case Input: Selection sort array best/worst runtime is the same, so not applicable to overall Best Case. Case where the arrays do not have same elements, and are not the same length, will have the fastest runtime. (Efficiency= 2n^2+4)
+			-Worst Case Input: Selection sort array best/worst is the same, so not applicable to overall Best Case. If arrrays are equal, comparing each index of A to B will take longest runtime. (Efficiency = 2n^2+n+6)
+
+		-Transform your count formula into big-O notation by:
+			-Taking the efficiency with worst case input
+			-Dropping insignificant terms.
+			-Dropping constant coefficients.
+
+				Big-O: O(n^2)
+
+
+
+		
+			
+	2. Counting total number characters that have a duplicate within a string (i.e. "gigi the gato" would result in 7 (g x 3 + i x 2 + t x 2)
+		
+		-Create an algorithm to solve the problem (pseudocode):
+			int finalcount = 0
+			for loop that starts at index of 0 until the string.length()-1 (String a with a length of n), i++
+				int counter starting at 1
+				char store value of index A
+				for loop that starts at +1 of index A, and goes up until string.length()-1, j++
+					//compares index A to each of the other indexes (denoted B)
+					if index A value == index B value 
+						counter++
+				for loop that starts at +1 of index A, and goes up until string.length()-1, k++
+					if index A value == index B value 
+						delete char B
+				if counter > 1
+					finalcount = finalcount+counter
+			System.out.print(finalcount)
+
+		-Identify the factors that would influence the running time, and which can be known before the algorithm or code is executed. Assign names (such as n) to each factor.
+			-The three for loops will influence the running time, each with a value of n for each loop
+
+		-Identify the operations that must be counted. You need not count every statement separately. If a group of statements always executes together, treat the group as a single unit. If a method is called, and you do not know the running time of that method, count it as a single operation.
+			(1) int finalcount = 0
+			(n) for loop that starts at index of 0 until the string.length()-1 (String a with a length of n), i++
+				int counter starting at 1
+				char store value of index A
+				(n) for loop that starts at +1 of index A, and goes up until string.length()-1, j++
+					//compares index A to each of the other indexes (denoted B)
+					if index A value == index B value 
+						counter++
+				(n) for loop that starts at +1 of index A, and goes up until string.length()-1, k++
+					if index A value == index B value 
+						delete char B
+				if counter > 1
+					finalcount = finalcount+counter
+			(1) System.out.print(finalcount)
+
+		-Count the operations performed by the algorithm or code. Express the count as a function of the factors you identified in Step 2. If the count cannot be expressed as a simple function of those factors, define the bounds that can be placed on the count: the best case (lower bound) and worst case (upper bound).
+			
+			function of program: 
+				(Upper bound) Worst case: 2n^2+2
+				(Lower bound) Best case: 2n+2
+
+		-Determine what the Best Case Inputs are, and the Worst Case Inputs are, and the efficiency of your implementation
+			Best case (if a string of the same character repeating- reduction of first first loop runtime from n to 1): 2n+2
+			Worst case (if string is all different characters from each other): 2n^2+2
+
+		-Transform your count formula into big-O notation by:
+			-Taking the efficiency with worst case input
+			-Dropping insignificant terms.
+			-Dropping constant coefficients.
+
+				Big-O: O(n^2)
+
+	3. Finding an empty row in a 2-D array where empty is defined as an element with a 0 entry.
+		
+		-Create an algorithm to solve the problem (pseudocode):
+
+			for loop with int i that runs through each row of the array, i< array.length; i++
+				int counter = 0;
+				for loop with int j that runs through each column of specified row, j< array[i].length; j++
+					if index of j == 0;
+						counter++
+				if counter == array[i].length
+					System.out.print("Row "+i+" is empty")
+
+		-Identify the factors that would influence the running time, and which can be known before the algorithm or code is executed. Assign names (such as n) to each factor.
+			-The two for loops will influence the running time, each with a value of n for each loop
+
+		-Identify the operations that must be counted. You need not count every statement separately. If a group of statements always executes together, treat the group as a single unit. If a method is called, and you do not know the running time of that method, count it as a single operation.
+			(n) for loop with int i that runs through each row of the array, i< array.length; i++
+				int counter = 0;
+				(n) for loop with int j that runs through each column of specified row, j< array[i].length; j++
+					if index of j == 0;
+						counter++
+				if counter == array[i].length
+					System.out.print("Row "+i+" is empty")
+
+		-Count the operations performed by the algorithm or code. Express the count as a function of the factors you identified in Step 2. If the count cannot be expressed as a simple function of those factors, define the bounds that can be placed on the count: the best case (lower bound) and worst case (upper bound).
+			
+			function of program: n^2
+
+		-Determine what the Best Case Inputs are, and the Worst Case Inputs are, and the efficiency of your implementation
+			Best case and worst case are the same; efficiency = n^2
+
+		-Transform your count formula into big-O notation by:
+			-Taking the efficiency with worst case input
+			-Dropping insignificant terms.
+			-Dropping constant coefficients.
+
+				Big-O: O(n^2)

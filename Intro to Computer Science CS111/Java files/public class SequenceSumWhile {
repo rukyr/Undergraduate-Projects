@@ -1,0 +1,15 @@
+public class SequenceSumWhile {
+	public static void main(String[] args) {
+		System.out.print("Enter terminator: ");
+		int terminator = IO.readInt();
+		System.out.print("Enter next number: ");
+		int number = IO.readInt();
+		int sum = 0;
+		while (terminator != number) {
+				sum = sum + number;
+				System.out.print("Enter next number: ");
+				number = IO.readInt();
+		}
+		IO.outputIntAnswer(sum);
+	}
+}
